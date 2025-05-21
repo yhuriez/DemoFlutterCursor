@@ -67,7 +67,7 @@ dependencies:
   path_provider: ^2.1.5
   firebase_app_installations: ^0.3.2+5
   firebase_messaging: ^15.2.5
-  flutter_local_notifications: ^19.1.0
+  flutter_local_notifications: ^19.2.1
   mixpanel_flutter: ^2.4.1
   slang: ^4.7.1
   slang_flutter: ^4.7.0
