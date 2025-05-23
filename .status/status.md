@@ -6,6 +6,7 @@
 - Home
 - Settings
 - Theme switcher 
+- Task list management
 
 ## In progress
 

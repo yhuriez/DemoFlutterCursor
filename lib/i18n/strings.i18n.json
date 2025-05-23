@@ -23,6 +23,17 @@
             "confirm": "Disconnect"
         }
     },
+    "tasks": {
+        "list": {
+            "title": "My Tasks",
+            "empty_state": "No tasks yet. Create your first task!",
+            "loading": "Loading tasks..."
+        },
+        "task": {
+            "complete": "Complete",
+            "incomplete": "Incomplete"
+        }
+    },
     "rate_popup": {
         "title": "Would you have 15s to rate us?",
         "description": "It's fast and very helpful! Thanks a lot!",

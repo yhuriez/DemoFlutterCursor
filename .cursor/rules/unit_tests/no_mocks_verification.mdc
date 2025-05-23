@@ -1,7 +1,7 @@
 ---
 description:
 globs:
-alwaysApply: false
+alwaysApply: true
 ---
 # No-Mocks Verification
 
@@ -44,9 +44,5 @@ If mocks are detected:
 3. Replace mock setup code with fake setup
 4. Replace mock verification with direct state checks on fakes
 5. Run tests to ensure they still pass
-
-## Template Examples for Converting
-- [From Mock to Fake - Repository Tests](mdc:.cursor/rules/templates/mock_to_fake_repository_test.md)
-- [From Mock to Fake - Use Case Tests](mdc:.cursor/rules/templates/mock_to_fake_usecase_test.md)
 
 Remember: The goal is not just to avoid mocks syntactically, but to embrace the fake implementation pattern for better tests.

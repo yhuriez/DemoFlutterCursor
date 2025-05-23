@@ -4,6 +4,7 @@ import 'package:demo_flutter_cursor/modules/authentication/recover_password_page
 import 'package:demo_flutter_cursor/modules/authentication/signin_page.dart';
 import 'package:demo_flutter_cursor/modules/authentication/signup_page.dart';
 import 'package:demo_flutter_cursor/modules/home/home_page.dart';
+import 'package:demo_flutter_cursor/modules/tasks/ui/task_list_page.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -53,6 +54,11 @@ GoRouter generateRouter({
         name: RecoverPasswordPage.routeName,
         path: '/${RecoverPasswordPage.routeName}',
         builder: (context, state) => const RecoverPasswordPage(),
+      ),
+      GoRoute(
+        name: TaskListPage.routeName,
+        path: '/${TaskListPage.routeName}',
+        builder: (context, state) => const TaskListPage(),
       ),
       GoRoute(
         name: '404',
