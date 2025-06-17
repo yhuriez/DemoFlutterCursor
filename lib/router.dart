@@ -5,6 +5,7 @@ import 'package:demo_flutter_cursor/modules/authentication/signup_page.dart';
 import 'package:demo_flutter_cursor/modules/authentication/ui/guards/authenticated_guard.dart';
 import 'package:demo_flutter_cursor/modules/example/ui/example_page.dart';
 import 'package:demo_flutter_cursor/modules/home/home_page.dart';
+import 'package:demo_flutter_cursor/modules/plants/ui/add_plant_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -55,6 +56,16 @@ GoRouter generateRouter({
         builder:
             (context, state) =>
                 ExamplePage(exampleId: state.pathParameters['exampleId']!),
+      ),
+
+      GoRoute(
+        name: AddPlantPage.routeName,
+        path: '/${AddPlantPage.routeName}',
+        builder:
+            (context, state) => const AuthenticatedGuard(
+              fallbackRoute: '/signup',
+              child: AddPlantPage(),
+            ),
       ),
 
       GoRoute(
