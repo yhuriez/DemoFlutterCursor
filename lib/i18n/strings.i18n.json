@@ -146,5 +146,47 @@
                 "description": "We will review your suggestion"
             }
         }
+    },
+    "common": {
+        "cancel": "Cancel",
+        "save": "Save",
+        "dismiss": "Dismiss",
+        "required": "Required"
+    },
+    "plants": {
+        "addPlant": {
+            "title": "Add New Plant",
+            "reset": "Reset",
+            "successMessage": "Plant added successfully!",
+            "form": {
+                "name": {
+                    "label": "Plant Name",
+                    "hint": "Enter the name of your plant",
+                    "required": "Plant name is required"
+                },
+                "plantType": {
+                    "label": "Plant Type",
+                    "hint": "e.g., Tropical, Succulent, etc.",
+                    "required": "Plant type is required"
+                },
+                "wateringFrequency": {
+                    "label": "Watering Frequency (days)",
+                    "hint": "How often should you water this plant?",
+                    "invalid": "Watering frequency must be between 1 and 365 days"
+                },
+                "notes": {
+                    "label": "Notes (optional)",
+                    "hint": "Any special care instructions or notes",
+                    "tooLong": "Notes must be 500 characters or less"
+                },
+                "photo": {
+                    "label": "Photo (optional)",
+                    "selectPhoto": "Select Photo",
+                    "takePhoto": "Take Photo",
+                    "removePhoto": "Remove Photo"
+                },
+                "submit": "Add Plant"
+            }
+        }
     }
 }

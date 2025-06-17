@@ -1,10 +1,11 @@
+import 'package:demo_flutter_cursor/modules/plants/data/repositories/plant_repository.dart';
 import 'package:demo_flutter_cursor/modules/plants/domain/models/plant.dart';
 import 'package:demo_flutter_cursor/modules/plants/domain/repositories/plant_repository.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final addPlantUseCaseProvider = Provider<AddPlantUseCase>((ref) {
-  // TODO: inject repository when repository provider is created
-  throw UnimplementedError('Repository provider not yet implemented');
+  final repository = ref.watch(plantRepositoryProvider);
+  return AddPlantUseCase(plantRepository: repository);
 });
 
 class AddPlantUseCase {

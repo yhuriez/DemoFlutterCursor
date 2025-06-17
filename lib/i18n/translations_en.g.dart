@@ -47,6 +47,7 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 	late final TranslationsRequestNotificationPermissionEn request_notification_permission = TranslationsRequestNotificationPermissionEn.internal(_root);
 	late final TranslationsOnboardingEn onboarding = TranslationsOnboardingEn.internal(_root);
 	late final TranslationsFeatureRequestsEn feature_requests = TranslationsFeatureRequestsEn.internal(_root);
+	late final TranslationsCommonEn common = TranslationsCommonEn.internal(_root);
 	late final TranslationsPlantsEn plants = TranslationsPlantsEn.internal(_root);
 }
 
@@ -170,6 +171,19 @@ class TranslationsFeatureRequestsEn {
 	late final TranslationsFeatureRequestsVoteSuccessEn vote_success = TranslationsFeatureRequestsVoteSuccessEn.internal(_root);
 	late final TranslationsFeatureRequestsVoteErrorEn vote_error = TranslationsFeatureRequestsVoteErrorEn.internal(_root);
 	late final TranslationsFeatureRequestsAddFeatureEn add_feature = TranslationsFeatureRequestsAddFeatureEn.internal(_root);
+}
+
+// Path: common
+class TranslationsCommonEn {
+	TranslationsCommonEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get cancel => 'Cancel';
+	String get save => 'Save';
+	String get dismiss => 'Dismiss';
+	String get required => 'Required';
 }
 
 // Path: plants
@@ -388,13 +402,10 @@ class TranslationsPlantsAddPlantEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	String get title => 'Add Plant';
+	String get title => 'Add New Plant';
+	String get reset => 'Reset';
+	String get successMessage => 'Plant added successfully!';
 	late final TranslationsPlantsAddPlantFormEn form = TranslationsPlantsAddPlantFormEn.internal(_root);
-	late final TranslationsPlantsAddPlantActionsEn actions = TranslationsPlantsAddPlantActionsEn.internal(_root);
-	late final TranslationsPlantsAddPlantValidationEn validation = TranslationsPlantsAddPlantValidationEn.internal(_root);
-	late final TranslationsPlantsAddPlantSuccessEn success = TranslationsPlantsAddPlantSuccessEn.internal(_root);
-	late final TranslationsPlantsAddPlantErrorEn error = TranslationsPlantsAddPlantErrorEn.internal(_root);
-	String get loading => 'Adding plant...';
 }
 
 // Path: feature_requests.add_feature.toast_success
@@ -416,57 +427,11 @@ class TranslationsPlantsAddPlantFormEn {
 
 	// Translations
 	late final TranslationsPlantsAddPlantFormNameEn name = TranslationsPlantsAddPlantFormNameEn.internal(_root);
-	late final TranslationsPlantsAddPlantFormTypeEn type = TranslationsPlantsAddPlantFormTypeEn.internal(_root);
+	late final TranslationsPlantsAddPlantFormPlantTypeEn plantType = TranslationsPlantsAddPlantFormPlantTypeEn.internal(_root);
 	late final TranslationsPlantsAddPlantFormWateringFrequencyEn wateringFrequency = TranslationsPlantsAddPlantFormWateringFrequencyEn.internal(_root);
 	late final TranslationsPlantsAddPlantFormNotesEn notes = TranslationsPlantsAddPlantFormNotesEn.internal(_root);
 	late final TranslationsPlantsAddPlantFormPhotoEn photo = TranslationsPlantsAddPlantFormPhotoEn.internal(_root);
-}
-
-// Path: plants.addPlant.actions
-class TranslationsPlantsAddPlantActionsEn {
-	TranslationsPlantsAddPlantActionsEn.internal(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-	String get cancel => 'Cancel';
-	String get save => 'Save Plant';
-}
-
-// Path: plants.addPlant.validation
-class TranslationsPlantsAddPlantValidationEn {
-	TranslationsPlantsAddPlantValidationEn.internal(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-	String get nameRequired => 'Plant name is required';
-	String get typeRequired => 'Plant type is required';
-	String get frequencyRequired => 'Watering frequency is required';
-	String get frequencyRange => 'Frequency must be between 1 and 365 days';
-	String get notesMaxLength => 'Notes cannot exceed 500 characters';
-}
-
-// Path: plants.addPlant.success
-class TranslationsPlantsAddPlantSuccessEn {
-	TranslationsPlantsAddPlantSuccessEn.internal(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-	String get title => 'Success!';
-	String get message => 'Plant added successfully';
-}
-
-// Path: plants.addPlant.error
-class TranslationsPlantsAddPlantErrorEn {
-	TranslationsPlantsAddPlantErrorEn.internal(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-	String get title => 'Error';
-	String get message => 'Failed to add plant. Please try again.';
+	String get submit => 'Add Plant';
 }
 
 // Path: plants.addPlant.form.name
@@ -477,20 +442,20 @@ class TranslationsPlantsAddPlantFormNameEn {
 
 	// Translations
 	String get label => 'Plant Name';
-	String get hint => 'Enter the plant name';
-	String get error => 'Plant name is required';
+	String get hint => 'Enter the name of your plant';
+	String get required => 'Plant name is required';
 }
 
-// Path: plants.addPlant.form.type
-class TranslationsPlantsAddPlantFormTypeEn {
-	TranslationsPlantsAddPlantFormTypeEn.internal(this._root);
+// Path: plants.addPlant.form.plantType
+class TranslationsPlantsAddPlantFormPlantTypeEn {
+	TranslationsPlantsAddPlantFormPlantTypeEn.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get label => 'Plant Type';
-	String get hint => 'e.g., Flower, Cactus, Tree';
-	String get error => 'Plant type is required';
+	String get hint => 'e.g., Tropical, Succulent, etc.';
+	String get required => 'Plant type is required';
 }
 
 // Path: plants.addPlant.form.wateringFrequency
@@ -501,8 +466,8 @@ class TranslationsPlantsAddPlantFormWateringFrequencyEn {
 
 	// Translations
 	String get label => 'Watering Frequency (days)';
-	String get hint => 'How many days between watering';
-	String get error => 'Watering frequency must be between 1 and 365 days';
+	String get hint => 'How often should you water this plant?';
+	String get invalid => 'Watering frequency must be between 1 and 365 days';
 }
 
 // Path: plants.addPlant.form.notes
@@ -512,8 +477,9 @@ class TranslationsPlantsAddPlantFormNotesEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	String get label => 'Notes (Optional)';
-	String get hint => 'Additional information about your plant';
+	String get label => 'Notes (optional)';
+	String get hint => 'Any special care instructions or notes';
+	String get tooLong => 'Notes must be 500 characters or less';
 }
 
 // Path: plants.addPlant.form.photo
@@ -523,8 +489,8 @@ class TranslationsPlantsAddPlantFormPhotoEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	String get label => 'Photo (Optional)';
-	String get selectFromGallery => 'Select from Gallery';
+	String get label => 'Photo (optional)';
+	String get selectPhoto => 'Select Photo';
 	String get takePhoto => 'Take Photo';
 	String get removePhoto => 'Remove Photo';
 }
@@ -628,34 +594,30 @@ extension on Translations {
 			case 'feature_requests.add_feature.description_hint': return 'Describe the feature or the improvement you would like to see in the app';
 			case 'feature_requests.add_feature.toast_success.title': return 'Thank you!';
 			case 'feature_requests.add_feature.toast_success.description': return 'We will review your suggestion';
-			case 'plants.addPlant.title': return 'Add Plant';
+			case 'common.cancel': return 'Cancel';
+			case 'common.save': return 'Save';
+			case 'common.dismiss': return 'Dismiss';
+			case 'common.required': return 'Required';
+			case 'plants.addPlant.title': return 'Add New Plant';
+			case 'plants.addPlant.reset': return 'Reset';
+			case 'plants.addPlant.successMessage': return 'Plant added successfully!';
 			case 'plants.addPlant.form.name.label': return 'Plant Name';
-			case 'plants.addPlant.form.name.hint': return 'Enter the plant name';
-			case 'plants.addPlant.form.name.error': return 'Plant name is required';
-			case 'plants.addPlant.form.type.label': return 'Plant Type';
-			case 'plants.addPlant.form.type.hint': return 'e.g., Flower, Cactus, Tree';
-			case 'plants.addPlant.form.type.error': return 'Plant type is required';
+			case 'plants.addPlant.form.name.hint': return 'Enter the name of your plant';
+			case 'plants.addPlant.form.name.required': return 'Plant name is required';
+			case 'plants.addPlant.form.plantType.label': return 'Plant Type';
+			case 'plants.addPlant.form.plantType.hint': return 'e.g., Tropical, Succulent, etc.';
+			case 'plants.addPlant.form.plantType.required': return 'Plant type is required';
 			case 'plants.addPlant.form.wateringFrequency.label': return 'Watering Frequency (days)';
-			case 'plants.addPlant.form.wateringFrequency.hint': return 'How many days between watering';
-			case 'plants.addPlant.form.wateringFrequency.error': return 'Watering frequency must be between 1 and 365 days';
-			case 'plants.addPlant.form.notes.label': return 'Notes (Optional)';
-			case 'plants.addPlant.form.notes.hint': return 'Additional information about your plant';
-			case 'plants.addPlant.form.photo.label': return 'Photo (Optional)';
-			case 'plants.addPlant.form.photo.selectFromGallery': return 'Select from Gallery';
+			case 'plants.addPlant.form.wateringFrequency.hint': return 'How often should you water this plant?';
+			case 'plants.addPlant.form.wateringFrequency.invalid': return 'Watering frequency must be between 1 and 365 days';
+			case 'plants.addPlant.form.notes.label': return 'Notes (optional)';
+			case 'plants.addPlant.form.notes.hint': return 'Any special care instructions or notes';
+			case 'plants.addPlant.form.notes.tooLong': return 'Notes must be 500 characters or less';
+			case 'plants.addPlant.form.photo.label': return 'Photo (optional)';
+			case 'plants.addPlant.form.photo.selectPhoto': return 'Select Photo';
 			case 'plants.addPlant.form.photo.takePhoto': return 'Take Photo';
 			case 'plants.addPlant.form.photo.removePhoto': return 'Remove Photo';
-			case 'plants.addPlant.actions.cancel': return 'Cancel';
-			case 'plants.addPlant.actions.save': return 'Save Plant';
-			case 'plants.addPlant.validation.nameRequired': return 'Plant name is required';
-			case 'plants.addPlant.validation.typeRequired': return 'Plant type is required';
-			case 'plants.addPlant.validation.frequencyRequired': return 'Watering frequency is required';
-			case 'plants.addPlant.validation.frequencyRange': return 'Frequency must be between 1 and 365 days';
-			case 'plants.addPlant.validation.notesMaxLength': return 'Notes cannot exceed 500 characters';
-			case 'plants.addPlant.success.title': return 'Success!';
-			case 'plants.addPlant.success.message': return 'Plant added successfully';
-			case 'plants.addPlant.error.title': return 'Error';
-			case 'plants.addPlant.error.message': return 'Failed to add plant. Please try again.';
-			case 'plants.addPlant.loading': return 'Adding plant...';
+			case 'plants.addPlant.form.submit': return 'Add Plant';
 			default: return null;
 		}
 	}

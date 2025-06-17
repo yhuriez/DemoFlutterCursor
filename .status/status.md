@@ -7,10 +7,11 @@
 - Settings
 - Task list display
 - Task creation
-- Add plant to watering reminder list
+- Add plant to watering reminder list (Step 1: Domain layer)
+- Add plant to watering reminder list (Step 2: Data layer)
+- Add plant to watering reminder list (Step 3: UI layer)
 
 ## In progress
-- Add plant to watering reminder list (Step 2: Data layer)
 
 ## Pending features
 
